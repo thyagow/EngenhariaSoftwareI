@@ -1,0 +1,9 @@
+
+Seu saldo: {{usuario.saldo}}<br>
+Nome do produto: {{produto.nome_produto}}<br>
+<form action = "dar_lance" method = "POST">
+	{% csrf_token %}
+	Valor do lance: <input type="number" placeholder = "valor" id="valor_lance" value="{{produto.preco_final|floatformat:2}}" name="valor_lance" min="{{produto.preco_final|floatformat:2}}">
+	<br>
+	<input type="submit" name="id_produto" value="{{produto.pk}}">
+</form>

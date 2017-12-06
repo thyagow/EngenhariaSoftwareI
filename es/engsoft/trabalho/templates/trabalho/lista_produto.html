@@ -1,0 +1,17 @@
+<h1>{{ pesquisa }}</h1>
+
+
+{% for produto in produtos %}
+	<ul>
+	    <li>Nome do produto: {{produto.nome_produto}}</li>
+	    <li>Preco inicial: {{produto.preco_inicial|floatformat:2}}</li>
+	    <li>Preco final: {{produto.preco_final|floatformat:2}}</li>
+	    <li>Data: {{produto.data_final}}</li>
+	    <li><a href="./dar_lance?id={{produto.pk}}">Comprar</a></li>
+	    {% if produto.comitente.pk == id_usuario %}
+	    	<li><a href="./finalizar_venda?id={{produto.pk}}">Finalizar venda</a></li>
+	    {% endif %}
+	</ul>
+{% endfor %}
+
+<a href="./">Voltar</a>

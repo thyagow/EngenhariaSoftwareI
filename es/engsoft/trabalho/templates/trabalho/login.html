@@ -1,0 +1,7 @@
+login:<br>
+<form action = "login" method = "POST">
+{% csrf_token %}
+	<input type="email" placeholder = "Email" id="email" name="email"><br>
+	<input type="password" placeholder = "Senha" id="senha" name="senha"><br>
+	<input type="submit"><br>
+</form>

@@ -1,0 +1,8 @@
+Cadastre-se:<br>
+<form action = "cadastro" method = "POST">
+{% csrf_token %}
+	<input type="text" placeholder = "Nome de Usuário" id="nome" name="nome"><br>
+	<input type="email" placeholder = "Email" id="email" name="email"><br>
+	<input type="password" placeholder = "Senha" id="senha" name="senha"><br>
+	<input type="submit"><br>
+</form>

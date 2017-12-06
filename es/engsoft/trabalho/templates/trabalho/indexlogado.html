@@ -1,0 +1,10 @@
+Nome: {{usuario.nome}}<br>
+Saldo: {{usuario.saldo|floatformat:2}}<br>
+<a href="logout">logout</a><br>
+
+<a href="criar_produto">Nova Ordem</a>
+<form action = "pesquisa" method = "POST">
+{% csrf_token %}
+	<input type="text" placeholder = "Nome do produto" id="nome" name="nome"><br>
+	<input type="submit" placeholder="Pesquisar"><br>
+</form>

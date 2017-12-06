@@ -1,0 +1,11 @@
+<form action = "criar_produto" method = "POST">
+{% csrf_token %}
+	<input type="text" placeholder = "Nome do produto" id="nome" name="nome"><br>
+	<input type="number" placeholder = "Preco inicial" id="p_incial" name="p_inicial"><br>
+	Duração:<select id="duracao" name="duracao">
+		{% for i in lista %}
+			<option value="{{i}}">{{ i }} dias</option>
+		{% endfor %}
+	</select><br>
+	<input type="submit" placeholder="Criar"><br>
+</form>
